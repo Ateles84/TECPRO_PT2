@@ -54,15 +54,23 @@ class Posts(object):
         """
         return Hastag(self.hastag)
 
+    def getContent(self):
+        """
+        """
+        return self.cont
+
     def __str__(self):
         """
         """
-        return "Post id: "+str(self.id)+" info: "+self.cont+" Date: "+str(self.__date)
+        return "Post id: "+str(self.id)+" info: "+self.cont+ " Hashtag: " + self.hastag + " Date: "+str(self.__date)
 
     def __eq__(self, other):
         """
         """
         return self.cont==other.cont
+
+    def __repr__(self):
+        return "Post id: "+str(self.id)+" info: "+self.cont+ " Hashtag: " + self.hastag + " Date: "+str(self.__date)
 
 
 if __name__=='__main__':

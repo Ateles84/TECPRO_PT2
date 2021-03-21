@@ -7,7 +7,7 @@ from usuari import Usuari
 from posts import Posts
 from hastag import Hastag
 
-class XarxaSocial(object):
+class iTicApp(object):
     """
     """
     def __init__(self):
@@ -37,33 +37,46 @@ class XarxaSocial(object):
     def publicarPost(self, nick, id_hastag, contingut_post):
         """
         """
-        if nick not in self.__usuaris:
-            return "Usuari no creat"
+        if nick not in list(self.__usuaris):
+            print("Usuari no creat")
         else:
             p = Posts(contingut_post, nick, id_hastag)
-            self.__usuaris[nick] = p
-            self.__posts[contingut_post] = p
+            self.__usuaris[nick].append(p)
+
+            if (nick not in list(self.__posts)):
+                self.__posts[nick] = []
+                self.__posts[nick].append(p)
+            else:
+                self.__posts[nick].append(p)
+
+
     def users(self):
         """
         """
-        return self.__usuaris.keys()
+        return list(self.__usuaris)
 
     def posts(self):
         """
         """
-        return self.__posts.keys()
+        return self.__posts
+
     def llistarPostsUser(self, nick):
         """
         """
-        if nick not in self.__usuaris:
+        if nick not in list(self.__usuaris):
             return "Usuari no existeix"
 
         else:
-            return self.__usuaris.get(nick)
+
+            aux = []
+            for x in self.__usuaris[nick]:
+                aux.append(x.getContent())
+
+            return "Posts de l'usuari " + nick + ": " + str(aux)
 
 
 if __name__=='__main__':
-    i = XarxaSocial()
+    i = iTicApp()
     i.afegeixUsuari('Bernat', 'b@gmail.com', 'bbrunet')
     i.afegeixHastag("muntanya")
     i.publicarPost("pere","muntanya","into the wild")
