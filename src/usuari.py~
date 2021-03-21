@@ -1,0 +1,19 @@
+"""
+============
+Mòdul Usuari
+============
+"""
+
+class Usuari():
+    """
+    """
+
+    def __init__(self, nick, email, password):
+        """
+        Constructor
+        """
+        self.nick = nick
+        self.__email = email
+        self.__password = password
+
+    
