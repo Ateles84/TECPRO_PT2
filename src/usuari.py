@@ -40,6 +40,9 @@ class Usuari(object):
 
         return "Usuari: "+self.nick+" Email: "+self.__email+" Encripted password: "+encPass
 
+    def lel(self):
+        print("vaya tolo")
+
 if __name__=='__main__':
     u = Usuari('Bernat', 'b@gmail.com', 'bbrunet')
     print(u)
