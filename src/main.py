@@ -1,3 +1,11 @@
+"""
+==========
+Mòdul Main
+==========
+
+El mòdul main no conté cap doctest
+"""
+
 from interpret import Interpret
 from xarxaSocial import iTicApp
 

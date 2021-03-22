@@ -8,6 +8,12 @@ import string
 
 class Usuari(object):
     """
+    
+    Classe Usuari
+
+    >>> u = Usuari('Bernat', 'b@gmail.com', 'bbrunet')
+    >>> u.nick
+    'Bernat'
     """
 
     def __init__(self, nick, email="", password=""):
@@ -24,7 +30,23 @@ class Usuari(object):
         self.__posts = []
 
     def registraPost(self, post):
+        """
+
+        >>> u = Usuari('Bernat', 'b@gmail.com', 'bbrunet')
+        >>> u.registraPost('bon diaaa')
+        >>> u.getPosts()
+        ['bon diaaa']
+        """
         self.__posts.append(post)
+
+    def getPosts(self):
+        """
+
+        >>> u = Usuari('Bernat', 'b@gmail.com', 'bbrunet')
+        >>> u.getPosts()
+        []
+        """
+        return self.__posts
 
 
     def __str__(self):
@@ -34,8 +56,7 @@ class Usuari(object):
 
         >>> u = Usuari('Bernat', 'b@gmail.com', 'bbrunet')
         >>> print(u)
-        Usuari: Bernat Email: b@gmail.com Encripted password: *******
-
+        Usuari: Bernat | Posts: []
         """
         encPass=""
         for c in self.__password:
@@ -43,8 +64,3 @@ class Usuari(object):
 
             #" | Email: " + self.__email + " | Encripted password: " + encPass +
         return "Usuari: " + self.nick + " | Posts: " + str(self.__posts)
-
-
-if __name__=='__main__':
-    u = Usuari('Bernat', 'b@gmail.com', 'bbrunet')
-    print(u)

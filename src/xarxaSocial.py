@@ -9,6 +9,9 @@ from hashtag import Hashtag
 
 class iTicApp(object):
     """
+    
+    Classe iTicApp
+
     """
     def __init__(self):
         self.__usuaris = {}
@@ -93,7 +96,7 @@ if __name__=='__main__':
     i.afegeixHashtag("muntanya")
     i.publicarPost("pere","muntanya","into the wild")
     i.publicarPost("Bernat","muntanya","into the wild")
-    #i.publicarPost("Bernat","muntnya","into th wild")
+    #i.publicarPost("Bernat","mutnya","into th wild")
     print(i.users())
     print(i.posts())
     print(i.llistarPostsUser("Bernat"))

@@ -1,19 +1,56 @@
+"""
+===============
+Mòdul Interpret
+===============
+"""
+
 class Interpret(object):
     """
+    
+    Classe Interpret
+
+    >>> i = Interpret()
+    >>> i.setPrompt(">>> ")
+    >>> i.run()
+
     """
 
     def __init__(self):
+        """
+
+        >>> i = Interpret()
+        >>> i.setPrompt(">>> ")
+        >>> i.run()
+        """
         self.__prompt = ""
         self.__dcom = {}
 
     def setPrompt(self, p):
+        """
+
+        >>> i = Interpret()
+        >>> i.setPrompt(p)
+        >>> i.__prompt
+        p
+        """
         self.__prompt = p
 
     def afegeixOrdre(self, nomc, ordre):
+        """
+
+        >>> i = Interpret()
+        >>> i.setPrompt(">>> ")
+        >>> i.afegeixOrdre("usuari", xxss.afegeixUsuari)
+        """
         self.__dcom[nomc] = ordre
 
     def run(self):
+        """
 
+        >>> i = Interpret()
+        >>> i.setPrompt(">>> ")
+        >>> i.run()
+        """
         ordre = ""
         semafor = True
 
@@ -26,7 +63,7 @@ class Interpret(object):
 
                 if (aux[0] == "usuari"):
                     self.__dcom[aux[0]](aux[1])
-                    print("entrem a usuari")
+                    #print("entrem a usuari")
 
                 elif (aux[0] == "hashtag"):
                     self.__dcom[aux[0]](aux[1])
@@ -37,7 +74,7 @@ class Interpret(object):
                 elif (aux[0] == "print"):
                     if (aux[1] == "users"):
                         print(self.__dcom[aux[1]]())
-                        print("entrem a usuari")
+                        #print("entrem a usuari")
 
                     elif(aux[1] == "posts"):
                         print(self.__dcom[aux[1]]())
@@ -51,10 +88,3 @@ class Interpret(object):
 
             else:
                 print("Ordre no trobada")
-
-
-
-if __name__ == '__main__':
-    i = Interpret()
-    i.setPrompt(">>> ")
-    i.run()
