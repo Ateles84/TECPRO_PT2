@@ -3,7 +3,7 @@
 Mòdul Posts
 ===========
 """
-from hastag import Hastag
+from hashtag import Hashtag
 from datetime import datetime
 
 id = 1
@@ -12,7 +12,7 @@ class Posts(object):
     """
     """
 
-    def __init__(self, contingut, nick, hastag):
+    def __init__(self, contingut):
         """
         Constructor
 
@@ -22,10 +22,11 @@ class Posts(object):
         """
         global id
         self.id = id
-        id = id +1
+        id += 1
         self.cont = contingut
-        self.nick = nick
-        self.hastag = hastag
+        self.nick = ""
+        self.hashtag = []
+
         datetim=datetime.now()
         self.__date=datetim.strftime("%c")
 
@@ -49,10 +50,10 @@ class Posts(object):
         """
         return self.nick
 
-    def getHastag(self):
+    def getHashtag(self):
         """
         """
-        return Hastag(self.hastag)
+        return Hashtag(self.hashtag)
 
     def getContent(self):
         """
@@ -62,7 +63,7 @@ class Posts(object):
     def __str__(self):
         """
         """
-        return "Post id: "+str(self.id)+" info: "+self.cont+ " Hashtag: " + self.hastag + " Date: "+str(self.__date)
+        return "Post id: " + str(self.id) + " | Usuari: " + str(self.nick) +" | info: "+ str(self.cont) + " | Hashtag: " + str(self.hashtag) + " | Date: "+str(self.__date)
 
     def __eq__(self, other):
         """
@@ -70,10 +71,15 @@ class Posts(object):
         return self.cont==other.cont
 
     def __repr__(self):
-        return "Post id: "+str(self.id)+" info: "+self.cont+ " Hashtag: " + self.hastag + " Date: "+str(self.__date)
+        return "Post id: " + str(self.id) + " | Usuari: " + str(self.nick) +" | info: "+ str(self.cont) + " | Hashtag: " + str(self.hashtag) + " | Date: "+str(self.__date)
 
+    def registraUsuari(self, nick):
+        self.nick = nick
 
-if __name__=='__main__':
+    def registraHashtag(self, id):
+        self.hashtag.append(Hashtag(id))
+
+if __name__ == '__main__':
     u = Posts("Bon dia!","rebbant","noudia")
     u1 = Posts("Bona dia!","brenat","noudia")
     u2 = Posts("Bon dia!","brunet","noumati")
@@ -83,4 +89,4 @@ if __name__=='__main__':
     print(u2.info())
     print(u==u1)
     print(u1.getNick())
-    print(u2.getHastag()==u1.getHastag())
+    print(u2.getHashtag()==u1.getHashtag())

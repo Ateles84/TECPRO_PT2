@@ -10,7 +10,7 @@ class Usuari(object):
     """
     """
 
-    def __init__(self, nick, email, password):
+    def __init__(self, nick, email="", password=""):
         """
         Constructor
 
@@ -21,6 +21,11 @@ class Usuari(object):
         self.nick = nick
         self.__email = email
         self.__password = password
+        self.__posts = []
+
+    def registraPost(self, post):
+        self.__posts.append(post)
+
 
     def __str__(self):
         """
@@ -35,10 +40,9 @@ class Usuari(object):
         encPass=""
         for c in self.__password:
             encPass=encPass+"*"
-            #c=string.ascii_letters[c]
-            #encPass=encPass+str(string.ascii_letters[(c+4)/26])
 
-        return "Usuari: "+self.nick+" Email: "+self.__email+" Encripted password: "+encPass
+            #" | Email: " + self.__email + " | Encripted password: " + encPass +
+        return "Usuari: " + self.nick + " | Posts: " + str(self.__posts)
 
 
 if __name__=='__main__':

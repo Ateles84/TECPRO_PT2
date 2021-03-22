@@ -5,7 +5,7 @@ Mòdul Xarxa Social
 """
 from usuari import Usuari
 from posts import Posts
-from hastag import Hastag
+from hashtag import Hashtag
 
 class iTicApp(object):
     """
@@ -13,35 +13,46 @@ class iTicApp(object):
     def __init__(self):
         self.__usuaris = {}
         self.__posts = {}
-        self.__hastags = {}
+        self.__hashtags = {}
 
-    def afegeixUsuari(self,nick, email, password):
+    def afegeixUsuari(self,nick, email="", password=""):
         """
         """
         if nick in self.__usuaris.keys():
             return "Usuari ja existent"
         else:
             u = Usuari(nick, email, password)
-            self.__usuaris[nick] = []
+            self.__usuaris[nick] = u
 
-
-    def afegeixHastag(self, id):
+    def afegeixUsuari(self,nick):
         """
         """
-        if id in self.__hastags.keys():
-            return "Hastag ja existent"
+        if nick in self.__usuaris.keys():
+            return "Usuari ja existent"
         else:
-            h = Hastag(id)
-            self.__hastags[id] = h
+            u = Usuari(nick)
+            self.__usuaris[nick] = u
 
-    def publicarPost(self, nick, id_hastag, contingut_post):
+    def afegeixHashtag(self, id):
+        """
+        """
+        if id in self.__hashtags.keys():
+            return "Hashtag ja existent"
+        else:
+            h = Hashtag(id)
+            self.__hashtags[id] = h
+
+    def publicarPost(self, nick, id_hashtag, contingut_post):
         """
         """
         if nick not in list(self.__usuaris):
             print("Usuari no creat")
         else:
-            p = Posts(contingut_post, nick, id_hastag)
-            self.__usuaris[nick].append(p)
+            p = Posts(contingut_post)
+            p.registraUsuari(nick)
+            p.registraHashtag(Hashtag(id_hashtag))
+
+            self.__usuaris[nick].registraPost(p)
 
             if (nick not in list(self.__posts)):
                 self.__posts[nick] = []
@@ -53,7 +64,7 @@ class iTicApp(object):
     def users(self):
         """
         """
-        return list(self.__usuaris)
+        return str(list(self.__usuaris))
 
     def posts(self):
         """
@@ -67,21 +78,22 @@ class iTicApp(object):
             return "Usuari no existeix"
 
         else:
-
+            return str(self.__usuaris[nick])
+            """
             aux = []
             for x in self.__usuaris[nick]:
                 aux.append(x.getContent())
 
             return "Posts de l'usuari " + nick + ": " + str(aux)
-
+            """
 
 if __name__=='__main__':
     i = iTicApp()
     i.afegeixUsuari('Bernat', 'b@gmail.com', 'bbrunet')
-    i.afegeixHastag("muntanya")
+    i.afegeixHashtag("muntanya")
     i.publicarPost("pere","muntanya","into the wild")
     i.publicarPost("Bernat","muntanya","into the wild")
-    i.publicarPost("Bernat","muntnya","into th wild")
+    #i.publicarPost("Bernat","muntnya","into th wild")
     print(i.users())
     print(i.posts())
     print(i.llistarPostsUser("Bernat"))

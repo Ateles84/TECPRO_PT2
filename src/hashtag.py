@@ -1,10 +1,10 @@
 """
 ============
-Mòdul Hastag
+Mòdul Hashtag
 ============
 """
 
-class Hastag(object):
+class Hashtag(object):
     """
     """
 
@@ -16,7 +16,11 @@ class Hastag(object):
     def __str__(self):
         """
         """
-        return "#"+self.id
+        return "#" + str(self.id)
+
+    def __repr__(self):
+        return str(self.id)
+
 
     def __eq__(self, other):
         """
@@ -24,9 +28,9 @@ class Hastag(object):
         return self.id==other.id
 
 if __name__=='__main__':
-    u = Hastag("muntanya")
-    u2 = Hastag("montanya")
-    u3 = Hastag("muntanya")
+    u = Hashtag("muntanya")
+    u2 = Hashtag("montanya")
+    u3 = Hashtag("muntanya")
     print(u)
     print(u2)
     print(u==u3)
