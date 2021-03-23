@@ -6,7 +6,7 @@ Mòdul Hashtag
 
 class Hashtag(object):
     """
-    
+
     Classe Hashtag
 
     >>> u = Hashtag("muntanya")
@@ -26,6 +26,7 @@ class Hashtag(object):
         'muntanya'
         """
         self.id = id
+        self.usos = 0
 
     def __str__(self):
         """
@@ -34,7 +35,7 @@ class Hashtag(object):
         >>> print(u)
         #muntanya
         """
-        return "#" + str(self.id)
+        return "#" + str(self.id) + " | cops utilitzat: " + str(self.usos)
 
     def __repr__(self):
         """
@@ -43,7 +44,7 @@ class Hashtag(object):
         >>> u.id
         'muntanya'
         """
-        return str(self.id)
+        return "#" + str(self.id) + " | cops utilitzat: " + str(self.usos)
 
 
     def __eq__(self, other):
@@ -54,3 +55,6 @@ class Hashtag(object):
         True
         """
         return self.id==other.id
+
+    def hashTagUtilitzat(self):
+        self.usos += 1

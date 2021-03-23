@@ -18,11 +18,14 @@ class iTicApp(object):
         self.__posts = {}
         self.__hashtags = {}
 
-    def afegeixUsuari(self,nick, email="", password=""):
+    def afegeixUsuari(self,nick, email, password):
         """
+        Aquest metode no es fa servir, ja que per a fer servir l'interpret nomes es fa servir el metdoe d'abaix
 
         >>> i = iTicApp()
-        >>> i.afegeixUsuari('Bernat', 'b@gmail.com', 'bbrunet')
+        >>> i.afegeixUsuari('Bernat')
+        >>> i.users()
+        "['Bernat']"
         """
         if nick in self.__usuaris.keys():
             return "Usuari ja existent"
@@ -32,9 +35,12 @@ class iTicApp(object):
 
     def afegeixUsuari(self,nick):
         """
+        Aprofitant el metode anterior, afegim aquest amb sobrecarrega per a que faci la funcionalitat a l'interpret
 
         >>> i = iTicApp()
         >>> i.afegeixUsuari('Bernat')
+        >>> i.users()
+        "['Bernat']"
         """
         if nick in self.__usuaris.keys():
             return "Usuari ja existent"
@@ -44,30 +50,39 @@ class iTicApp(object):
 
     def afegeixHashtag(self, id):
         """
+        S'afeig el Hashtag al diccionari corresponent, no es fa servir mai
 
         >>> i = iTicApp()
         >>> i.afegeixHashtag('munta')
+        >>> i.afegeixHashtag('munta')
+        Hashtag ja existent
         """
         if id in self.__hashtags.keys():
-            return "Hashtag ja existent"
+            print("Hashtag ja existent")
         else:
             h = Hashtag(id)
             self.__hashtags[id] = h
 
     def publicarPost(self, nick, id_hashtag, contingut_post):
         """
+        Metode que registra posts a partir d'un usuari i d'un hashtag, el Doctest no llista usuaris ja que el timestamp no sera mai igual
 
         >>> i = iTicApp()
-        >>> i.afegeixUsuari('Bernat')
-        >>> i.afegeixHashtag('munta')
         >>> i.publicarPost('Bernat', 'munta', 'bon diaaa' )
+        Usuari no creat
         """
         if nick not in list(self.__usuaris):
             print("Usuari no creat")
         else:
             p = Posts(contingut_post)
             p.registraUsuari(nick)
-            p.registraHashtag(Hashtag(id_hashtag))
+
+            if (id_hashtag not in self.__hashtags.keys()):
+                p.registraHashtag(Hashtag(id_hashtag))
+                self.__hashtags[id_hashtag].hashTagUtilitzat()
+
+            else:
+                self.__hashtags[id_hashtag].hashTagUtilitzat()
 
             self.__usuaris[nick].registraPost(p)
 
@@ -80,6 +95,7 @@ class iTicApp(object):
 
     def users(self):
         """
+        Metode que retorna una llista en forma d'str amb tots els usuaris registrats a la xarxa social
 
         >>> i = iTicApp()
         >>> i.afegeixUsuari('Bernat')
@@ -90,6 +106,8 @@ class iTicApp(object):
 
     def posts(self):
         """
+        Metode que retorna un diccionari amb tots els posts registrats a la xarxa social
+
 
         >>> i = iTicApp()
         >>> i.afegeixUsuari('Bernat')
@@ -101,8 +119,26 @@ class iTicApp(object):
         """
         return self.__posts
 
+    def hashtags(self):
+        """
+        Metode que retorna un diccionari amb tots els hashtags registrats a la xarxa social
+
+        >>> i = iTicApp()
+        >>> i.afegeixUsuari('Bernat')
+        >>> i.afegeixHashtag('munta')
+        >>> i.publicarPost('Bernat', 'munta', 'bon diaaa' )
+        >>> i.hashtags()
+        #munta | cops utilitzat: 1
+
+        """
+        aux = ""
+        for x in self.__hashtags.keys():
+            aux += str(self.__hashtags[x]) + " | "
+        return aux[0:len(aux)-2]
+
     def llistarPostsUser(self, nick):
         """
+        Metode que retorna una llista en forma d'str l'objecte usuari, aixo es degut a que a la tasca 5 es demana que cada objecte Usuari tingui tots els posts en una llista
 
         >>> i = iTicApp()
         >>> i.afegeixUsuari('Bernat')
@@ -116,10 +152,3 @@ class iTicApp(object):
 
         else:
             return str(self.__usuaris[nick])
-            """
-            aux = []
-            for x in self.__usuaris[nick]:
-                aux.append(x.getContent())
-
-            return "Posts de l'usuari " + nick + ": " + str(aux)
-            """

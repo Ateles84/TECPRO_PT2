@@ -10,7 +10,7 @@ id = 1
 
 class Posts(object):
     """
-    
+
     Classe Posts
 
     >>> u = Posts("Bon dia!")
@@ -25,8 +25,8 @@ class Posts(object):
     >>> print(u==u1)
     False
 
-    >>> print(u1.getNick())
-    ""
+    >>> print(u1.nick)
+    <BLANKLINE>
 
     >>> print(u2.getHashtag()==u1.getHashtag())
     True
@@ -36,7 +36,7 @@ class Posts(object):
         """
         Constructor
 
-        >>> u = Posts()
+        >>> u = Posts("NestleJunly")
         >>> u.nick
         ''
         """
@@ -61,10 +61,7 @@ class Posts(object):
 
     def getDate(self):
         """
-
-        >>> u = Posts("Bon dia!")
-        >>> u.getDate()
-        'Mon Mar 22 21:45:21 2021'
+        No realitzem docTest perque mai donara be
         """
         return self.__date
 
@@ -72,12 +69,6 @@ class Posts(object):
         """
         """
         return self.id
-
-    def getNick(self):
-        """
-
-        """
-        return self.nick
 
     def getHashtag(self):
         """
@@ -104,7 +95,7 @@ class Posts(object):
 
         >>> u = Posts("Bon dia!")
         >>> u.registraUsuari("bbp")
-        >>> u.getNick()
+        >>> u.nick
         'bbp'
         """
         self.nick = nick
@@ -123,5 +114,4 @@ if __name__ == '__main__':
     print(u2)
     print(u2.info())
     print(u==u1)
-    print(u1.getNick())
     print(u2.getHashtag()==u1.getHashtag())

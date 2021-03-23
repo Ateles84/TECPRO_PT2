@@ -8,7 +8,7 @@ import string
 
 class Usuari(object):
     """
-    
+
     Classe Usuari
 
     >>> u = Usuari('Bernat', 'b@gmail.com', 'bbrunet')
@@ -31,6 +31,7 @@ class Usuari(object):
 
     def registraPost(self, post):
         """
+        Aquest metode afegeix un post a l'atribut Posts(llista) de l'usuari
 
         >>> u = Usuari('Bernat', 'b@gmail.com', 'bbrunet')
         >>> u.registraPost('bon diaaa')
@@ -41,7 +42,8 @@ class Usuari(object):
 
     def getPosts(self):
         """
-
+        Aquest metode torna l'objecte llista de l'atribut Posts
+        
         >>> u = Usuari('Bernat', 'b@gmail.com', 'bbrunet')
         >>> u.getPosts()
         []

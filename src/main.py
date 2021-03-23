@@ -3,7 +3,7 @@
 Mòdul Main
 ==========
 
-El mòdul main no conté cap doctest
+El mòdul main no conté cap doctest, de totes formes, es pot solicitar l'acces al Github del projecte a la seguent direccio: github.com/Ateles84/TECPRO_PT2
 """
 
 from interpret import Interpret
@@ -19,8 +19,10 @@ if __name__ == '__main__':
     i.afegeixOrdre("hashtag", xxss.afegeixHashtag)
     i.afegeixOrdre("publicar", xxss.publicarPost)
     i.afegeixOrdre("print", "cyka blyat")
+    i.afegeixOrdre("help", "rush b fast")
     i.afegeixOrdre("users", xxss.users)
     i.afegeixOrdre("posts", xxss.posts)
     i.afegeixOrdre("posts-user", xxss.llistarPostsUser)
+    i.afegeixOrdre("hashtags", xxss.hashtags)
 
     i.run()
