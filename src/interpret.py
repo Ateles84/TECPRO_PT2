@@ -4,6 +4,10 @@ Mòdul Interpret
 ===============
 """
 
+from hashtag import Hashtag
+from xarxaSocial import iTicApp
+
+
 class Interpret(object):
     """
 
@@ -70,10 +74,15 @@ class Interpret(object):
                     self.__dcom[aux[0]](aux[1])
 
                 elif (aux[0] == "publicar"):
-                    self.__dcom[aux[0]](aux[1],aux[2],aux[3])  # nick, id hashtag, contingut
+                    if len(list(aux)) <= 3:
+                        print("Error, falta usuari/hashtag o post")
+                    else:
+                        self.__dcom[aux[0]](aux[1],aux[2],aux[3])  # nick, id hashtag, contingut
 
-                elif (aux[0] == "help"):
-                    print("Les ordres disponibles son: " + str(self.__dcom.keys()))
+                elif (aux[0] == "ajuda"):
+                    aux = list(self.__dcom.keys())
+                    aux.sort()
+                    print("Les ordres disponibles son: " + str(aux))
 
                 elif (aux[0] == "users" or aux[0] == "posts" or aux[0] == "posts-user" or aux[0] == "hashtags"):
                     print("Error de sintaxi a l'ordre " + aux[0] + ", falta el 'print'")
@@ -86,10 +95,16 @@ class Interpret(object):
                         print(self.__dcom[aux[1]]())
 
                     elif(aux[1] == "posts-user"):
-                        print(self.__dcom[aux[1]](aux[2]))
+                        if len(list(aux)) == 2:
+                            print("Error, falta nick")
+                        else:
+                            print(self.__dcom[aux[1]](aux[2]))
 
                     elif(aux[1] == "hashtags"):
-                        print(self.__dcom[aux[1]]())
+                        if len(self.__dcom[aux[1]]()) == 0:
+                            print("Encara no hi ha hashtags creats")
+                        else:
+                            print(self.__dcom[aux[1]]())
 
                     else:
                         print("Error de sintaxi al l'ordre print")

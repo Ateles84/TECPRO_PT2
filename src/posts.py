@@ -32,7 +32,7 @@ class Posts(object):
     True
     """
 
-    def __init__(self, contingut):
+    def __init__(self, contingut,id_hashtag):
         """
         Constructor
 
@@ -45,7 +45,7 @@ class Posts(object):
         id += 1
         self.cont = contingut
         self.nick = ""
-        self.hashtag = []
+        self.hashtag = id_hashtag
 
         datetim=datetime.now()
         self.__date=datetim.strftime("%c")
@@ -78,7 +78,7 @@ class Posts(object):
     def __str__(self):
         """
         """
-        return "Post id: " + str(self.id) + " | Usuari: " + str(self.nick) +" | info: "+ str(self.cont) + " | Hashtag: " + str(self.hashtag) + " | Date: "+str(self.__date)
+        return "Post id: " + str(self.id) + " | Usuari: " + str(self.nick) +" | info: "+ str(self.cont) + " | Hashtag: " + str(self.hashtag) + " | Date: #"+str(self.__date)
 
     def __eq__(self, other):
         """

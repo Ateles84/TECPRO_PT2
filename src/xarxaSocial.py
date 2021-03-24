@@ -74,10 +74,11 @@ class iTicApp(object):
         if nick not in list(self.__usuaris):
             print("Usuari no creat")
         else:
-            p = Posts(contingut_post)
+            p = Posts(contingut_post,id_hashtag)
             p.registraUsuari(nick)
 
             if (id_hashtag not in self.__hashtags.keys()):
+                return print("Hashtag no creat")
                 p.registraHashtag(Hashtag(id_hashtag))
                 self.__hashtags[id_hashtag].hashTagUtilitzat()
 
@@ -91,7 +92,6 @@ class iTicApp(object):
                 self.__posts[nick].append(p)
             else:
                 self.__posts[nick].append(p)
-
 
     def users(self):
         """
@@ -114,8 +114,7 @@ class iTicApp(object):
         >>> i.afegeixHashtag('munta')
         >>> i.publicarPost('Bernat', 'munta', 'bon diaaa' )
         >>> i.posts()
-        {'Bernat': [Post id: 1 | Usuari: Bernat | info: bon diaaa | Hashtag: [#munta] | Date: Tue Mar 23 18:25:36 2021]}
-
+        {'Bernat': [Post id: 1 | Usuari: Bernat | info: bon diaaa | Hashtag: [#munta] | Date: Wed Mar 24 08:31:49 2021]}
         """
         return self.__posts
 
@@ -128,7 +127,7 @@ class iTicApp(object):
         >>> i.afegeixHashtag('munta')
         >>> i.publicarPost('Bernat', 'munta', 'bon diaaa' )
         >>> i.hashtags()
-        #munta | cops utilitzat: 1
+        '#munta | cops utilitzat: 1 '
 
         """
         aux = ""
@@ -152,3 +151,32 @@ class iTicApp(object):
 
         else:
             return str(self.__usuaris[nick])
+
+
+
+
+
+
+    def desa(self,f):
+        """
+        Desa la xarxa ’self’ en el fitxer de text ’f’. El fitxer ’f’ ha d’estar obert en mode escriptura.
+
+        """
+        t = open(f,'w')
+
+
+        t.close()
+
+
+
+    def obre(self,f):
+        """
+        Afegeix a la xarxa ’self’ els usuaris i posts que hiha en el fitxer de text ’f’.
+        El fitxer ’f’ ha d’estar oberten mode lectura.
+
+        """
+
+        t = open(f,'w')
+
+
+        t.close()
