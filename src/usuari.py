@@ -43,7 +43,7 @@ class Usuari(object):
     def getPosts(self):
         """
         Aquest metode torna l'objecte llista de l'atribut Posts
-        
+
         >>> u = Usuari('Bernat', 'b@gmail.com', 'bbrunet')
         >>> u.getPosts()
         []
@@ -52,6 +52,22 @@ class Usuari(object):
 
 
     def __str__(self):
+        """
+        Converteix l'objecte a cadena
+        :rtype: str
+
+        >>> u = Usuari('Bernat', 'b@gmail.com', 'bbrunet')
+        >>> print(u)
+        Usuari: Bernat | Posts: []
+        """
+        encPass=""
+        for c in self.__password:
+            encPass=encPass+"*"
+
+            #" | Email: " + self.__email + " | Encripted password: " + encPass +
+        return "Usuari: " + self.nick + " | Posts: " + str(self.__posts)
+
+    def __repr__(self):
         """
         Converteix l'objecte a cadena
         :rtype: str

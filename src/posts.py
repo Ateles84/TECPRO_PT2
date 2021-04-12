@@ -103,7 +103,7 @@ class Posts(object):
     def registraHashtag(self, id):
         """
         """
-        self.hashtag.append(Hashtag(id))
+        self.hashtag = Hashtag(id)
 
 if __name__ == '__main__':
     u = Posts("Bon dia!")

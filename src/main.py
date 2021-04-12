@@ -24,5 +24,7 @@ if __name__ == '__main__':
     i.afegeixOrdre("posts", xxss.posts)
     i.afegeixOrdre("posts-user", xxss.llistarPostsUser)
     i.afegeixOrdre("hashtags", xxss.hashtags)
+    i.afegeixOrdre("desa", xxss.desa)
+    i.afegeixOrdre("obre", xxss.obre)
 
     i.run()

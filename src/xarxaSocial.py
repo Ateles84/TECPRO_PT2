@@ -6,6 +6,7 @@ Mòdul Xarxa Social
 from usuari import Usuari
 from posts import Posts
 from hashtag import Hashtag
+import pickle
 
 class iTicApp(object):
     """
@@ -28,7 +29,7 @@ class iTicApp(object):
         "['Bernat']"
         """
         if nick in self.__usuaris.keys():
-            return "Usuari ja existent"
+            print("Usuari ja existent")
         else:
             u = Usuari(nick, email, password)
             self.__usuaris[nick] = u
@@ -43,7 +44,7 @@ class iTicApp(object):
         "['Bernat']"
         """
         if nick in self.__usuaris.keys():
-            return "Usuari ja existent"
+            print("Usuari ja existent")
         else:
             u = Usuari(nick)
             self.__usuaris[nick] = u
@@ -78,7 +79,8 @@ class iTicApp(object):
             p.registraUsuari(nick)
 
             if (id_hashtag not in self.__hashtags.keys()):
-                return print("Hashtag no creat")
+                print("Hashtag no creat")
+                self.__hashtags[id_hashtag] = Hashtag(id_hashtag)
                 p.registraHashtag(Hashtag(id_hashtag))
                 self.__hashtags[id_hashtag].hashTagUtilitzat()
 
@@ -153,30 +155,31 @@ class iTicApp(object):
             return str(self.__usuaris[nick])
 
 
-
-
-
-
-    def desa(self,f):
+    def desa(self):
         """
-        Desa la xarxa ’self’ en el fitxer de text ’f’. El fitxer ’f’ ha d’estar obert en mode escriptura.
+        Hem recorregut a l'eina Pickle al trobar la dificultat de llegir un diccionari d'un arxiu amb l'usuari formatejat per el metode __str__,
+        L'idea ve de poder guardar objectes a arxius en forma de dades binaries:
+        https://stackoverflow.com/questions/4529815/saving-an-object-data-persistence
 
-        """
-        t = open(f,'w')
-
-
-        t.close()
-
-
-
-    def obre(self,f):
-        """
-        Afegeix a la xarxa ’self’ els usuaris i posts que hiha en el fitxer de text ’f’.
-        El fitxer ’f’ ha d’estar oberten mode lectura.
+        Desa la xarxa ’self’ en un fitxer de text. El fitxer ha d’estar obert en mode escriptura.
 
         """
+        f = "data.dat"
 
-        t = open(f,'w')
+        with open(f, 'wb') as output:
+            pickle.dump(self.__usuaris, output, pickle.HIGHEST_PROTOCOL)
+            pickle.dump(self.__posts, output, pickle.HIGHEST_PROTOCOL)
+            pickle.dump(self.__hashtags, output, pickle.HIGHEST_PROTOCOL)
 
+    def obre(self):
+        """
+        Afegeix a la xarxa ’self’ els usuaris i posts que hi ha en el fitxer de text.
+        El fitxer ha d’estar oberten mode lectura.
 
-        t.close()
+        """
+        f = "data.dat"
+
+        with open(f, 'rb') as input:
+            self.__usuaris = pickle.load(input)
+            self.__posts = pickle.load(input)
+            self.__hashtags = pickle.load(input)
