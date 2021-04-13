@@ -1,24 +1,25 @@
 
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<html lang="cat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="cat">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Mòduls &#8212; xarxaSocial 1.0b2 documentation</title>
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Documentació" href="documentacio.html" />
     <link rel="prev" title="Welcome to xarxaSocial&#39;s documentation!" href="index.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
-  
   
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
@@ -28,39 +29,37 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          
-
           <div class="body" role="main">
             
   <div class="section" id="module-usuari">
 <span id="moduls"></span><h1>Mòduls<a class="headerlink" href="#module-usuari" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="modul-usuari">
 <h2>Mòdul Usuari<a class="headerlink" href="#modul-usuari" title="Permalink to this headline">¶</a></h2>
-<dl class="py class">
+<dl class="class">
 <dt id="usuari.Usuari">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">usuari.</span></code><code class="sig-name descname"><span class="pre">Usuari</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nick</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">email</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/usuari.html#Usuari"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#usuari.Usuari" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">usuari.</code><code class="descname">Usuari</code><span class="sig-paren">(</span><em>nick</em>, <em>email=''</em>, <em>password=''</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/usuari.html#Usuari"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#usuari.Usuari" title="Permalink to this definition">¶</a></dt>
 <dd><p>Classe Usuari</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">u</span> <span class="o">=</span> <span class="n">Usuari</span><span class="p">(</span><span class="s1">&#39;Bernat&#39;</span><span class="p">,</span> <span class="s1">&#39;b@gmail.com&#39;</span><span class="p">,</span> <span class="s1">&#39;bbrunet&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">u</span> <span class="o">=</span> <span class="n">Usuari</span><span class="p">(</span><span class="s1">&#39;Bernat&#39;</span><span class="p">,</span> <span class="s1">&#39;b@gmail.com&#39;</span><span class="p">,</span> <span class="s1">&#39;bbrunet&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">u</span><span class="o">.</span><span class="n">nick</span>
 <span class="go">&#39;Bernat&#39;</span>
 </pre></div>
 </div>
-<dl class="py method">
+<dl class="method">
 <dt id="usuari.Usuari.getPosts">
-<code class="sig-name descname"><span class="pre">getPosts</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/usuari.html#Usuari.getPosts"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#usuari.Usuari.getPosts" title="Permalink to this definition">¶</a></dt>
+<code class="descname">getPosts</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/usuari.html#Usuari.getPosts"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#usuari.Usuari.getPosts" title="Permalink to this definition">¶</a></dt>
 <dd><p>Aquest metode torna l'objecte llista de l'atribut Posts</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">u</span> <span class="o">=</span> <span class="n">Usuari</span><span class="p">(</span><span class="s1">&#39;Bernat&#39;</span><span class="p">,</span> <span class="s1">&#39;b@gmail.com&#39;</span><span class="p">,</span> <span class="s1">&#39;bbrunet&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">u</span> <span class="o">=</span> <span class="n">Usuari</span><span class="p">(</span><span class="s1">&#39;Bernat&#39;</span><span class="p">,</span> <span class="s1">&#39;b@gmail.com&#39;</span><span class="p">,</span> <span class="s1">&#39;bbrunet&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">u</span><span class="o">.</span><span class="n">getPosts</span><span class="p">()</span>
 <span class="go">[]</span>
 </pre></div>
 </div>
 </dd></dl>
 
-<dl class="py method">
+<dl class="method">
 <dt id="usuari.Usuari.registraPost">
-<code class="sig-name descname"><span class="pre">registraPost</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">post</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/usuari.html#Usuari.registraPost"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#usuari.Usuari.registraPost" title="Permalink to this definition">¶</a></dt>
+<code class="descname">registraPost</code><span class="sig-paren">(</span><em>post</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/usuari.html#Usuari.registraPost"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#usuari.Usuari.registraPost" title="Permalink to this definition">¶</a></dt>
 <dd><p>Aquest metode afegeix un post a l'atribut Posts(llista) de l'usuari</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">u</span> <span class="o">=</span> <span class="n">Usuari</span><span class="p">(</span><span class="s1">&#39;Bernat&#39;</span><span class="p">,</span> <span class="s1">&#39;b@gmail.com&#39;</span><span class="p">,</span> <span class="s1">&#39;bbrunet&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">u</span> <span class="o">=</span> <span class="n">Usuari</span><span class="p">(</span><span class="s1">&#39;Bernat&#39;</span><span class="p">,</span> <span class="s1">&#39;b@gmail.com&#39;</span><span class="p">,</span> <span class="s1">&#39;bbrunet&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">u</span><span class="o">.</span><span class="n">registraPost</span><span class="p">(</span><span class="s1">&#39;bon diaaa&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">u</span><span class="o">.</span><span class="n">getPosts</span><span class="p">()</span>
 <span class="go">[&#39;bon diaaa&#39;]</span>
@@ -73,67 +72,68 @@
 </div>
 <span class="target" id="module-posts"></span><div class="section" id="modul-posts">
 <h2>Mòdul Posts<a class="headerlink" href="#modul-posts" title="Permalink to this headline">¶</a></h2>
-<dl class="py class">
+<dl class="class">
 <dt id="posts.Posts">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">posts.</span></code><code class="sig-name descname"><span class="pre">Posts</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">contingut</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/posts.html#Posts"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#posts.Posts" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">posts.</code><code class="descname">Posts</code><span class="sig-paren">(</span><em>contingut</em>, <em>id_hashtag</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/posts.html#Posts"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#posts.Posts" title="Permalink to this definition">¶</a></dt>
 <dd><p>Classe Posts</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">u</span> <span class="o">=</span> <span class="n">Posts</span><span class="p">(</span><span class="s2">&quot;Bon dia!&quot;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">u</span> <span class="o">=</span> <span class="n">Posts</span><span class="p">(</span><span class="s2">&quot;Bon dia!&quot;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">u1</span> <span class="o">=</span> <span class="n">Posts</span><span class="p">(</span><span class="s2">&quot;Bona dia!&quot;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">u2</span> <span class="o">=</span> <span class="n">Posts</span><span class="p">(</span><span class="s2">&quot;Bon dia!&quot;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">u</span><span class="p">)</span>
 <span class="go">Post id: 1 | Usuari:  | info: Bon dia! | Hashtag: [] | Date: Mon Mar 22 21:39:40 2021</span>
 </pre></div>
 </div>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">u2</span><span class="o">.</span><span class="n">info</span><span class="p">())</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">u2</span><span class="o">.</span><span class="n">info</span><span class="p">())</span>
 <span class="go">Bon dia!</span>
 </pre></div>
 </div>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">u</span><span class="o">==</span><span class="n">u1</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">u</span><span class="o">==</span><span class="n">u1</span><span class="p">)</span>
 <span class="go">False</span>
 </pre></div>
 </div>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">u1</span><span class="o">.</span><span class="n">nick</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">u1</span><span class="o">.</span><span class="n">nick</span><span class="p">)</span>
+<span class="go">&lt;BLANKLINE&gt;</span>
 </pre></div>
 </div>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">u2</span><span class="o">.</span><span class="n">getHashtag</span><span class="p">()</span><span class="o">==</span><span class="n">u1</span><span class="o">.</span><span class="n">getHashtag</span><span class="p">())</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">u2</span><span class="o">.</span><span class="n">getHashtag</span><span class="p">()</span><span class="o">==</span><span class="n">u1</span><span class="o">.</span><span class="n">getHashtag</span><span class="p">())</span>
 <span class="go">True</span>
 </pre></div>
 </div>
-<dl class="py method">
+<dl class="method">
 <dt id="posts.Posts.getDate">
-<code class="sig-name descname"><span class="pre">getDate</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/posts.html#Posts.getDate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#posts.Posts.getDate" title="Permalink to this definition">¶</a></dt>
+<code class="descname">getDate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/posts.html#Posts.getDate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#posts.Posts.getDate" title="Permalink to this definition">¶</a></dt>
 <dd><p>No realitzem docTest perque mai donara be</p>
 </dd></dl>
 
-<dl class="py method">
+<dl class="method">
 <dt id="posts.Posts.getHashtag">
-<code class="sig-name descname"><span class="pre">getHashtag</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/posts.html#Posts.getHashtag"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#posts.Posts.getHashtag" title="Permalink to this definition">¶</a></dt>
+<code class="descname">getHashtag</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/posts.html#Posts.getHashtag"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#posts.Posts.getHashtag" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="py method">
+<dl class="method">
 <dt id="posts.Posts.getId">
-<code class="sig-name descname"><span class="pre">getId</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/posts.html#Posts.getId"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#posts.Posts.getId" title="Permalink to this definition">¶</a></dt>
+<code class="descname">getId</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/posts.html#Posts.getId"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#posts.Posts.getId" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="py method">
+<dl class="method">
 <dt id="posts.Posts.info">
-<code class="sig-name descname"><span class="pre">info</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/posts.html#Posts.info"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#posts.Posts.info" title="Permalink to this definition">¶</a></dt>
-<dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">u</span> <span class="o">=</span> <span class="n">Posts</span><span class="p">(</span><span class="s2">&quot;Bon dia!&quot;</span><span class="p">)</span>
+<code class="descname">info</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/posts.html#Posts.info"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#posts.Posts.info" title="Permalink to this definition">¶</a></dt>
+<dd><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">u</span> <span class="o">=</span> <span class="n">Posts</span><span class="p">(</span><span class="s2">&quot;Bon dia!&quot;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">u</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
 <span class="go">&#39;Bon dia!&#39;</span>
 </pre></div>
 </div>
 </dd></dl>
 
-<dl class="py method">
+<dl class="method">
 <dt id="posts.Posts.registraHashtag">
-<code class="sig-name descname"><span class="pre">registraHashtag</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/posts.html#Posts.registraHashtag"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#posts.Posts.registraHashtag" title="Permalink to this definition">¶</a></dt>
+<code class="descname">registraHashtag</code><span class="sig-paren">(</span><em>id</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/posts.html#Posts.registraHashtag"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#posts.Posts.registraHashtag" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="py method">
+<dl class="method">
 <dt id="posts.Posts.registraUsuari">
-<code class="sig-name descname"><span class="pre">registraUsuari</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nick</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/posts.html#Posts.registraUsuari"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#posts.Posts.registraUsuari" title="Permalink to this definition">¶</a></dt>
-<dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">u</span> <span class="o">=</span> <span class="n">Posts</span><span class="p">(</span><span class="s2">&quot;Bon dia!&quot;</span><span class="p">)</span>
+<code class="descname">registraUsuari</code><span class="sig-paren">(</span><em>nick</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/posts.html#Posts.registraUsuari"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#posts.Posts.registraUsuari" title="Permalink to this definition">¶</a></dt>
+<dd><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">u</span> <span class="o">=</span> <span class="n">Posts</span><span class="p">(</span><span class="s2">&quot;Bon dia!&quot;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">u</span><span class="o">.</span><span class="n">registraUsuari</span><span class="p">(</span><span class="s2">&quot;bbp&quot;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">u</span><span class="o">.</span><span class="n">nick</span>
 <span class="go">&#39;bbp&#39;</span>
@@ -146,17 +146,17 @@
 </div>
 <span class="target" id="module-hashtag"></span><div class="section" id="modul-hashtag">
 <h2>Mòdul Hashtag<a class="headerlink" href="#modul-hashtag" title="Permalink to this headline">¶</a></h2>
-<dl class="py class">
+<dl class="class">
 <dt id="hashtag.Hashtag">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">hashtag.</span></code><code class="sig-name descname"><span class="pre">Hashtag</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/hashtag.html#Hashtag"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hashtag.Hashtag" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">hashtag.</code><code class="descname">Hashtag</code><span class="sig-paren">(</span><em>id</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/hashtag.html#Hashtag"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#hashtag.Hashtag" title="Permalink to this definition">¶</a></dt>
 <dd><p>Classe Hashtag</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">u</span> <span class="o">=</span> <span class="n">Hashtag</span><span class="p">(</span><span class="s2">&quot;muntanya&quot;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">u</span> <span class="o">=</span> <span class="n">Hashtag</span><span class="p">(</span><span class="s2">&quot;muntanya&quot;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">u2</span> <span class="o">=</span> <span class="n">Hashtag</span><span class="p">(</span><span class="s2">&quot;montanya&quot;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">u</span><span class="p">)</span>
 <span class="go">#muntanya</span>
 </pre></div>
 </div>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">u2</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">u2</span><span class="p">)</span>
 <span class="go">#montanya</span>
 </pre></div>
 </div>
@@ -165,15 +165,15 @@
 </div>
 <span class="target" id="module-xarxaSocial"></span><div class="section" id="modul-xarxa-social">
 <h2>Mòdul Xarxa Social<a class="headerlink" href="#modul-xarxa-social" title="Permalink to this headline">¶</a></h2>
-<dl class="py class">
+<dl class="class">
 <dt id="xarxaSocial.iTicApp">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">xarxaSocial.</span></code><code class="sig-name descname"><span class="pre">iTicApp</span></code><a class="reference internal" href="_modules/xarxaSocial.html#iTicApp"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#xarxaSocial.iTicApp" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">xarxaSocial.</code><code class="descname">iTicApp</code><a class="reference internal" href="_modules/xarxaSocial.html#iTicApp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#xarxaSocial.iTicApp" title="Permalink to this definition">¶</a></dt>
 <dd><p>Classe iTicApp</p>
-<dl class="py method">
+<dl class="method">
 <dt id="xarxaSocial.iTicApp.afegeixHashtag">
-<code class="sig-name descname"><span class="pre">afegeixHashtag</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/xarxaSocial.html#iTicApp.afegeixHashtag"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#xarxaSocial.iTicApp.afegeixHashtag" title="Permalink to this definition">¶</a></dt>
+<code class="descname">afegeixHashtag</code><span class="sig-paren">(</span><em>id</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/xarxaSocial.html#iTicApp.afegeixHashtag"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#xarxaSocial.iTicApp.afegeixHashtag" title="Permalink to this definition">¶</a></dt>
 <dd><p>S'afeig el Hashtag al diccionari corresponent, no es fa servir mai</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">i</span> <span class="o">=</span> <span class="n">iTicApp</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">i</span> <span class="o">=</span> <span class="n">iTicApp</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">i</span><span class="o">.</span><span class="n">afegeixHashtag</span><span class="p">(</span><span class="s1">&#39;munta&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">i</span><span class="o">.</span><span class="n">afegeixHashtag</span><span class="p">(</span><span class="s1">&#39;munta&#39;</span><span class="p">)</span>
 <span class="go">Hashtag ja existent</span>
@@ -181,11 +181,11 @@
 </div>
 </dd></dl>
 
-<dl class="py method">
+<dl class="method">
 <dt id="xarxaSocial.iTicApp.afegeixUsuari">
-<code class="sig-name descname"><span class="pre">afegeixUsuari</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nick</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/xarxaSocial.html#iTicApp.afegeixUsuari"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#xarxaSocial.iTicApp.afegeixUsuari" title="Permalink to this definition">¶</a></dt>
+<code class="descname">afegeixUsuari</code><span class="sig-paren">(</span><em>nick</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/xarxaSocial.html#iTicApp.afegeixUsuari"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#xarxaSocial.iTicApp.afegeixUsuari" title="Permalink to this definition">¶</a></dt>
 <dd><p>Aprofitant el metode anterior, afegim aquest amb sobrecarrega per a que faci la funcionalitat a l'interpret</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">i</span> <span class="o">=</span> <span class="n">iTicApp</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">i</span> <span class="o">=</span> <span class="n">iTicApp</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">i</span><span class="o">.</span><span class="n">afegeixUsuari</span><span class="p">(</span><span class="s1">&#39;Bernat&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">i</span><span class="o">.</span><span class="n">users</span><span class="p">()</span>
 <span class="go">&quot;[&#39;Bernat&#39;]&quot;</span>
@@ -193,25 +193,34 @@
 </div>
 </dd></dl>
 
-<dl class="py method">
+<dl class="method">
+<dt id="xarxaSocial.iTicApp.desa">
+<code class="descname">desa</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/xarxaSocial.html#iTicApp.desa"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#xarxaSocial.iTicApp.desa" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hem recorregut a l'eina Pickle al trobar la dificultat de llegir un diccionari d'un arxiu amb l'usuari formatejat per el metode __str__,
+L'idea ve de poder guardar objectes a arxius en forma de dades binaries:
+<a class="reference external" href="https://stackoverflow.com/questions/4529815/saving-an-object-data-persistence">https://stackoverflow.com/questions/4529815/saving-an-object-data-persistence</a></p>
+<p>Desa la xarxa ’self’ en un fitxer de text. El fitxer ha d’estar obert en mode escriptura.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="xarxaSocial.iTicApp.hashtags">
-<code class="sig-name descname"><span class="pre">hashtags</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/xarxaSocial.html#iTicApp.hashtags"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#xarxaSocial.iTicApp.hashtags" title="Permalink to this definition">¶</a></dt>
+<code class="descname">hashtags</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/xarxaSocial.html#iTicApp.hashtags"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#xarxaSocial.iTicApp.hashtags" title="Permalink to this definition">¶</a></dt>
 <dd><p>Metode que retorna un diccionari amb tots els hashtags registrats a la xarxa social</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">i</span> <span class="o">=</span> <span class="n">iTicApp</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">i</span> <span class="o">=</span> <span class="n">iTicApp</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">i</span><span class="o">.</span><span class="n">afegeixUsuari</span><span class="p">(</span><span class="s1">&#39;Bernat&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">i</span><span class="o">.</span><span class="n">afegeixHashtag</span><span class="p">(</span><span class="s1">&#39;munta&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">i</span><span class="o">.</span><span class="n">publicarPost</span><span class="p">(</span><span class="s1">&#39;Bernat&#39;</span><span class="p">,</span> <span class="s1">&#39;munta&#39;</span><span class="p">,</span> <span class="s1">&#39;bon diaaa&#39;</span> <span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">i</span><span class="o">.</span><span class="n">hashtags</span><span class="p">()</span>
-<span class="go">#munta | cops utilitzat: 1</span>
+<span class="go">&#39;#munta | cops utilitzat: 1 &#39;</span>
 </pre></div>
 </div>
 </dd></dl>
 
-<dl class="py method">
+<dl class="method">
 <dt id="xarxaSocial.iTicApp.llistarPostsUser">
-<code class="sig-name descname"><span class="pre">llistarPostsUser</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nick</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/xarxaSocial.html#iTicApp.llistarPostsUser"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#xarxaSocial.iTicApp.llistarPostsUser" title="Permalink to this definition">¶</a></dt>
+<code class="descname">llistarPostsUser</code><span class="sig-paren">(</span><em>nick</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/xarxaSocial.html#iTicApp.llistarPostsUser"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#xarxaSocial.iTicApp.llistarPostsUser" title="Permalink to this definition">¶</a></dt>
 <dd><p>Metode que retorna una llista en forma d'str l'objecte usuari, aixo es degut a que a la tasca 5 es demana que cada objecte Usuari tingui tots els posts en una llista</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">i</span> <span class="o">=</span> <span class="n">iTicApp</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">i</span> <span class="o">=</span> <span class="n">iTicApp</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">i</span><span class="o">.</span><span class="n">afegeixUsuari</span><span class="p">(</span><span class="s1">&#39;Bernat&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">i</span><span class="o">.</span><span class="n">afegeixHashtag</span><span class="p">(</span><span class="s1">&#39;munta&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">i</span><span class="o">.</span><span class="n">publicarPost</span><span class="p">(</span><span class="s1">&#39;Bernat&#39;</span><span class="p">,</span> <span class="s1">&#39;munta&#39;</span><span class="p">,</span> <span class="s1">&#39;bon diaaa&#39;</span> <span class="p">)</span>
@@ -221,36 +230,43 @@
 </div>
 </dd></dl>
 
-<dl class="py method">
+<dl class="method">
+<dt id="xarxaSocial.iTicApp.obre">
+<code class="descname">obre</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/xarxaSocial.html#iTicApp.obre"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#xarxaSocial.iTicApp.obre" title="Permalink to this definition">¶</a></dt>
+<dd><p>Afegeix a la xarxa ’self’ els usuaris i posts que hi ha en el fitxer de text.
+El fitxer ha d’estar oberten mode lectura.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="xarxaSocial.iTicApp.posts">
-<code class="sig-name descname"><span class="pre">posts</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/xarxaSocial.html#iTicApp.posts"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#xarxaSocial.iTicApp.posts" title="Permalink to this definition">¶</a></dt>
+<code class="descname">posts</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/xarxaSocial.html#iTicApp.posts"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#xarxaSocial.iTicApp.posts" title="Permalink to this definition">¶</a></dt>
 <dd><p>Metode que retorna un diccionari amb tots els posts registrats a la xarxa social</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">i</span> <span class="o">=</span> <span class="n">iTicApp</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">i</span> <span class="o">=</span> <span class="n">iTicApp</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">i</span><span class="o">.</span><span class="n">afegeixUsuari</span><span class="p">(</span><span class="s1">&#39;Bernat&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">i</span><span class="o">.</span><span class="n">afegeixHashtag</span><span class="p">(</span><span class="s1">&#39;munta&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">i</span><span class="o">.</span><span class="n">publicarPost</span><span class="p">(</span><span class="s1">&#39;Bernat&#39;</span><span class="p">,</span> <span class="s1">&#39;munta&#39;</span><span class="p">,</span> <span class="s1">&#39;bon diaaa&#39;</span> <span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">i</span><span class="o">.</span><span class="n">posts</span><span class="p">()</span>
-<span class="go">{&#39;Bernat&#39;: [Post id: 1 | Usuari: Bernat | info: bon diaaa | Hashtag: [#munta] | Date: Tue Mar 23 18:25:36 2021]}</span>
+<span class="go">{&#39;Bernat&#39;: [Post id: 1 | Usuari: Bernat | info: bon diaaa | Hashtag: [#munta] | Date: Wed Mar 24 08:31:49 2021]}</span>
 </pre></div>
 </div>
 </dd></dl>
 
-<dl class="py method">
+<dl class="method">
 <dt id="xarxaSocial.iTicApp.publicarPost">
-<code class="sig-name descname"><span class="pre">publicarPost</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nick</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id_hashtag</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">contingut_post</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/xarxaSocial.html#iTicApp.publicarPost"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#xarxaSocial.iTicApp.publicarPost" title="Permalink to this definition">¶</a></dt>
+<code class="descname">publicarPost</code><span class="sig-paren">(</span><em>nick</em>, <em>id_hashtag</em>, <em>contingut_post</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/xarxaSocial.html#iTicApp.publicarPost"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#xarxaSocial.iTicApp.publicarPost" title="Permalink to this definition">¶</a></dt>
 <dd><p>Metode que registra posts a partir d'un usuari i d'un hashtag, el Doctest no llista usuaris ja que el timestamp no sera mai igual</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">i</span> <span class="o">=</span> <span class="n">iTicApp</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">i</span> <span class="o">=</span> <span class="n">iTicApp</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">i</span><span class="o">.</span><span class="n">publicarPost</span><span class="p">(</span><span class="s1">&#39;Bernat&#39;</span><span class="p">,</span> <span class="s1">&#39;munta&#39;</span><span class="p">,</span> <span class="s1">&#39;bon diaaa&#39;</span> <span class="p">)</span>
 <span class="go">Usuari no creat</span>
 </pre></div>
 </div>
 </dd></dl>
 
-<dl class="py method">
+<dl class="method">
 <dt id="xarxaSocial.iTicApp.users">
-<code class="sig-name descname"><span class="pre">users</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/xarxaSocial.html#iTicApp.users"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#xarxaSocial.iTicApp.users" title="Permalink to this definition">¶</a></dt>
+<code class="descname">users</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/xarxaSocial.html#iTicApp.users"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#xarxaSocial.iTicApp.users" title="Permalink to this definition">¶</a></dt>
 <dd><p>Metode que retorna una llista en forma d'str amb tots els usuaris registrats a la xarxa social</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">i</span> <span class="o">=</span> <span class="n">iTicApp</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">i</span> <span class="o">=</span> <span class="n">iTicApp</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">i</span><span class="o">.</span><span class="n">afegeixUsuari</span><span class="p">(</span><span class="s1">&#39;Bernat&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">i</span><span class="o">.</span><span class="n">users</span><span class="p">()</span>
 <span class="go">&quot;[&#39;Bernat&#39;]&quot;</span>
@@ -263,42 +279,54 @@
 </div>
 <span class="target" id="module-interpret"></span><div class="section" id="modul-interpret">
 <h2>Mòdul Interpret<a class="headerlink" href="#modul-interpret" title="Permalink to this headline">¶</a></h2>
-<dl class="py class">
+<dl class="class">
 <dt id="interpret.Interpret">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">interpret.</span></code><code class="sig-name descname"><span class="pre">Interpret</span></code><a class="reference internal" href="_modules/interpret.html#Interpret"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#interpret.Interpret" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">interpret.</code><code class="descname">Interpret</code><span class="sig-paren">(</span><em>alpha=''</em>, <em>omega=''</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/interpret.html#Interpret"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#interpret.Interpret" title="Permalink to this definition">¶</a></dt>
 <dd><p>Classe Interpret</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">i</span> <span class="o">=</span> <span class="n">Interpret</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">i</span> <span class="o">=</span> <span class="n">Interpret</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">i</span><span class="o">.</span><span class="n">setPrompt</span><span class="p">(</span><span class="s2">&quot;&gt;&gt;&gt; &quot;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">i</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
 </pre></div>
 </div>
-<dl class="py method">
+<dl class="method">
 <dt id="interpret.Interpret.afegeixOrdre">
-<code class="sig-name descname"><span class="pre">afegeixOrdre</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nomc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ordre</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/interpret.html#Interpret.afegeixOrdre"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#interpret.Interpret.afegeixOrdre" title="Permalink to this definition">¶</a></dt>
+<code class="descname">afegeixOrdre</code><span class="sig-paren">(</span><em>nomc</em>, <em>ordre</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/interpret.html#Interpret.afegeixOrdre"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#interpret.Interpret.afegeixOrdre" title="Permalink to this definition">¶</a></dt>
 <dd><p>Afegeix ordre al diccionari, assignant paraula clau: nom de l'ordre i ordre: funcio</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">i</span> <span class="o">=</span> <span class="n">Interpret</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">i</span> <span class="o">=</span> <span class="n">Interpret</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">i</span><span class="o">.</span><span class="n">setPrompt</span><span class="p">(</span><span class="s2">&quot;&gt;&gt;&gt; &quot;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">i</span><span class="o">.</span><span class="n">afegeixOrdre</span><span class="p">(</span><span class="s2">&quot;usuari&quot;</span><span class="p">,</span> <span class="n">xxss</span><span class="o">.</span><span class="n">afegeixUsuari</span><span class="p">)</span>
 </pre></div>
 </div>
 </dd></dl>
 
-<dl class="py method">
+<dl class="method">
 <dt id="interpret.Interpret.run">
-<code class="sig-name descname"><span class="pre">run</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/interpret.html#Interpret.run"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#interpret.Interpret.run" title="Permalink to this definition">¶</a></dt>
+<code class="descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/interpret.html#Interpret.run"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#interpret.Interpret.run" title="Permalink to this definition">¶</a></dt>
 <dd><p>Classic &quot;caixer&quot;, aplica la logica necessaria per a poder interpretar les ordres i els arguments introduits</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">i</span> <span class="o">=</span> <span class="n">Interpret</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">i</span> <span class="o">=</span> <span class="n">Interpret</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">i</span><span class="o">.</span><span class="n">setPrompt</span><span class="p">(</span><span class="s2">&quot;&gt;&gt;&gt; &quot;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">i</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
 </pre></div>
 </div>
 </dd></dl>
 
-<dl class="py method">
+<dl class="method">
+<dt id="interpret.Interpret.setBegin">
+<code class="descname">setBegin</code><span class="sig-paren">(</span><em>alpha</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/interpret.html#Interpret.setBegin"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#interpret.Interpret.setBegin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defineix la funció que s'executarà abans d'arrencar l'interpret</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="interpret.Interpret.setEnd">
+<code class="descname">setEnd</code><span class="sig-paren">(</span><em>omega</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/interpret.html#Interpret.setEnd"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#interpret.Interpret.setEnd" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defineix la funció que s'executarà abans d'acabar l'execució de l'interpret</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="interpret.Interpret.setPrompt">
-<code class="sig-name descname"><span class="pre">setPrompt</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/interpret.html#Interpret.setPrompt"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#interpret.Interpret.setPrompt" title="Permalink to this definition">¶</a></dt>
+<code class="descname">setPrompt</code><span class="sig-paren">(</span><em>p</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/interpret.html#Interpret.setPrompt"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#interpret.Interpret.setPrompt" title="Permalink to this definition">¶</a></dt>
 <dd><p>Canvia el prompt de l'interpret (~: &lt;- per defecte)</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">i</span> <span class="o">=</span> <span class="n">Interpret</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">i</span> <span class="o">=</span> <span class="n">Interpret</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">i</span><span class="o">.</span><span class="n">setPrompt</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">i</span><span class="o">.</span><span class="n">__prompt</span>
 <span class="go">p</span>
@@ -317,7 +345,6 @@
 
 
           </div>
-          
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -356,23 +383,17 @@
 </ul>
 </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
+  <h3>Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" />
       <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
-
-
-
-
-
-
-
-
+<script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -381,8 +402,8 @@
       &copy;2021, Bernat Brunet Pedra i Juan Jose Gomez Pasos.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.5.2</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
       
       |
       <a href="_sources/moduls.rst.txt"
