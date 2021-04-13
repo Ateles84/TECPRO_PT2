@@ -19,7 +19,7 @@ class Interpret(object):
 
     """
 
-    def __init__(self):
+    def __init__(self, alpha = "", omega = ""):
         """
 
         >>> i = Interpret()
@@ -28,6 +28,8 @@ class Interpret(object):
         """
         self.__prompt = "~: "
         self.__dcom = {}
+        self.__alpha = alpha
+        self.__omega = omega
 
     def setPrompt(self, p):
         """
@@ -39,6 +41,20 @@ class Interpret(object):
         p
         """
         self.__prompt = p
+
+    def setBegin(self, alpha):
+        """
+        Defineix la funció que s'executarà abans d'arrencar l'interpret
+
+        """
+        self.__alpha = alpha
+
+    def setEnd(self, omega):
+        """
+        Defineix la funció que s'executarà abans d'acabar l'execució de l'interpret
+
+        """
+        self.__omega = omega
 
     def afegeixOrdre(self, nomc, ordre):
         """
@@ -61,8 +77,7 @@ class Interpret(object):
         ordre = ""
         semafor = True
 
-        self.__dcom["obre"]()
-
+        self.__alpha()
         while (semafor):
             ordre = input(self.__prompt)
 
@@ -83,6 +98,7 @@ class Interpret(object):
                         print("Error de sintaxi, sobran atributs")
                     else:
                         try:
+
                             self.__dcom[aux[0]](aux[1])
                         except:
                             print("Error al crear Hashtag, falta nom del hashtag")
@@ -157,7 +173,7 @@ class Interpret(object):
 
             elif (ordre == "surt"):
                 semafor = False
-                self.__dcom["desa"]()
+                self.__omega()
                 print("Fins aviat!")
 
             else:

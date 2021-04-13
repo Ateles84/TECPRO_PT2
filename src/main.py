@@ -14,6 +14,8 @@ if __name__ == '__main__':
 
     i = Interpret()
     i.setPrompt("~: ")
+    i.setBegin(xxss.obre)
+    i.setEnd(xxss.desa)
 
     i.afegeixOrdre("usuari", xxss.afegeixUsuari)
     i.afegeixOrdre("hashtag", xxss.afegeixHashtag)
@@ -25,6 +27,5 @@ if __name__ == '__main__':
     i.afegeixOrdre("posts-user", xxss.llistarPostsUser)
     i.afegeixOrdre("hashtags", xxss.hashtags)
     i.afegeixOrdre("desa", xxss.desa)
-    i.afegeixOrdre("obre", xxss.obre)
 
     i.run()
